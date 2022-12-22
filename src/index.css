@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url("./League_Spartan/LeagueSpartan-Medium.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+html{
+    font-family: LeagueSpartan;
+}
+  
+:root[data-theme="default"] {
+    --background-color: hsl(222, 26%, 31%);
+    --result-background: hsl(224, 36%, 15%);
+    --result-color: hsl(0, 0%, 100%);
+    --button-color: hsl(221, 14%, 31%);
+    --keypad-background: hsl(223, 31%, 20%);
+    --button-background: hsl(30, 25%, 89%);
+    --button-shadow: hsl(28, 16%, 65%);
+    --result-button-background: hsl(225, 21%, 49%);
+    --result-button-shadow: hsl(224, 28%, 35%);
+    --result-button-color:hsl(0, 0%, 100%);
+    --accent-background: hsl(6, 63%, 50%);
+    --accent-shadow: hsl(6, 70%, 34%);
+    --last-child-color: hsl(0, 0%, 100%);
+    --toggle-marging: 0px;
+}
+
+:root[data-theme="light"] {
+    --background-color: hsl(0, 0%, 90%);
+    --keypad-background: hsl(0, 5%, 81%);
+    --result-background: hsl(0, 0%, 93%);
+    --result-color: hsl(60, 10%, 19%);
+    --button-color: hsl(60, 10%, 19%);
+    --button-background: hsl(45, 7%, 89%);
+    --button-shadow: hsl(35, 11%, 61%);
+    --result-button-background: hsl(185, 42%, 37%);
+    --result-button-shadow: hsl(185, 58%, 25%);
+    --result-button-color:hsl(0, 0%, 100%);
+    --accent-background: hsl(25, 98%, 40%);
+    --accent-shadow: hsl(25, 99%, 27%);
+    --last-child-color: hsl(0, 0%, 100%);
+    --toggle-marging: 15px;
+}
+
+:root[data-theme="dark"] {
+    --background-color: hsl(268, 75%, 9%);
+    --result-background: hsl(268, 71%, 12%);
+    --result-color: hsl(52, 100%, 62%);
+    --button-color: hsl(52, 100%, 62%);
+    --keypad-background: hsl(268, 71%, 12%);
+    --button-background:hsl(268, 47%, 21%);
+    --button-shadow: hsl(290, 70%, 36%);
+    --result-button-background:  hsl(281, 89%, 26%);
+    --result-button-shadow:hsl(285, 91%, 52%); 
+    --result-button-color:hsl(0, 0%, 100%);
+    --accent-background: hsl(176, 100%, 44%);
+    --accent-shadow: hsl(177, 92%, 70%);
+    --last-child-color:hsl(198, 20%, 13%);
+    --toggle-marging: 30px;
+}
+
+body {
+    background: var(--background-color);
+    margin: 0;
+    transition: all 1s;
+}
+
+.mainPage{
+    height: 615px;
+    padding-top: 100px; 
+    /* width: 400px;  */
+    width: 380px; 
+    margin: auto;
+}
+
+
+.info{
+    display: flex;
+    justify-content: space-between; 
+    color: var(--result-color);
+    align-items: end; 
+    padding: 0 10px 20px 10px;
+    transition: all 1s;
+}
+.theme-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    font-size: 10px;
+}
+.theme{
+    padding-right: 20px;
+}
+.theme-numbers{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.radio-block{
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    width: 40px;
+    height: 10px;
+    border-radius: 20px;
+    background-color: var(--keypad-background);
+    transition: all 1s;
+}
+.radio-element{
+    width: 11px;
+    height: 11px;
+    border-radius: 20px;
+    background-color: var(--accent-background);
+    margin-left: var(--toggle-marging);
+    transition: all 1s;
+}
+.radio-element:hover{
+    cursor: pointer;
+    filter: brightness(150%);
+}
+
+
+.calculator-result{
+    background-color: var(--result-background);
+    display: flex;
+    margin: auto;
+    height: 50px;
+    border-radius: 8px;
+    color: var(--result-color);
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 900;
+    justify-content: right;
+    align-items: center;
+    transition: all 1s;
+}
+.calculator-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 8px;
+    background-color: var(--keypad-background);
+    margin: 15px auto auto;
+    padding: 10px;
+    /* height: 300px; */
+    transition: all 1s;
+}
+.button{
+    width: 70px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: var(--button-background);
+    border-width: 0px 0px 3px;
+    border-top-style: initial;
+    border-right-style: initial;
+    border-bottom-style: solid;
+    border-left-style: initial;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-bottom-color: var(--button-shadow);
+    border-left-color: initial;
+    border-image: initial;
+    margin: 10px;
+    color: var(--button-color);
+    font-family: LeagueSpartan;
+    font-weight: 900;
+    font-size: 28px;
+    padding-top: 8px;
+    transition: all 1s;
+}
+.button-back{
+    width: 70px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #fff;
+    border-width: 0px 0px 3px;
+    margin: 10px;
+    color: var(--button-color);
+    font-family: LeagueSpartan;
+    font-weight: 900;
+    font-size: 28px;
+    padding-top: 8px;
+} 
+.button:hover{
+    cursor: pointer;
+    filter: brightness(150%);
+}
+#DEL{
+    color: var(--result-button-color);
+    font-size: 20px;
+    background-color: var(--result-button-background);
+    border-bottom-color: var(--result-button-shadow);
+    transition: all 1s;
+}
+#RESET{
+    color: var(--result-button-color);
+    font-size: 20px;
+    background-color: var(--result-button-background);
+    border-bottom-color: var(--result-button-shadow);
+    width: 160px;
+    transition: all 1s;
+}
+.button:last-child{
+    color: var(--last-child-color);
+    font-size: 20px;
+    background-color: var(--accent-background);
+    border-bottom-color: var(--accent-shadow);
+    width: 160px;
+    transition: all 1s;
+}
+
+
