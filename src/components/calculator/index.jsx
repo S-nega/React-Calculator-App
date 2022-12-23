@@ -58,7 +58,7 @@ export const Calculator = () => {
       return setResult('0');
     }
     
-    if(!Number(num) && isActive){
+    if(!Number(num) && num!='0' && isActive ){
       return null;
     }
     else if(num === '+'){
@@ -88,9 +88,13 @@ export const Calculator = () => {
       }
       else if ((Number(result) && result !=='0') || result === '0.'){
         setResult(String(result) + num);
+        setIsActive(false);//
       }
       else{
+        console.log(num)
+
         setResult(String(num));
+        setIsActive(false);//
       }
     }
   }
