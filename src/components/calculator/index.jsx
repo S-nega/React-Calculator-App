@@ -37,7 +37,10 @@ export const Calculator = () => {
     }
     if(num === '.'){
       if(Number(result) && !isActive){
-        return setResult(result + '.');        
+        if(result.includes('.')){
+          return null;
+        }
+        return setResult(result + '.');
       }
       setIsActive(false);
       return setResult('0.');
